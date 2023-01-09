@@ -27,3 +27,92 @@
 html {
   font-size: 62.5%;
 }
+
+body {
+  width: 144rem;
+  height: 92.2rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--veryLightBlue);
+  font-family: var(--fontFamily);
+}
+
+#title {
+  width: 54rem;
+  height: 16.8rem;
+  margin-bottom: 6.4rem;
+  text-align: center;
+}
+
+#title h1,
+h2 {
+  font-size: 3.6rem;
+  letter-spacing: 0.2;
+  line-height: 1.3;
+  color: var(--veryDarkBlue);
+}
+
+#title h1 {
+  font-weight: var(--p1);
+}
+
+#title h2 {
+  font-weight: var(--p3);
+  margin-bottom: 1.3rem;
+}
+
+#title p {
+  font-size: 1.5rem;
+  font-weight: var(--p2);
+  line-height: 1.5;
+  letter-spacing: 0.1;
+  opacity: 0.5;
+}
+
+#cards-container {
+  width: 111rem;
+  height: 53rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+  grid-template-areas:
+    ". card-builder ."
+    "card-supervisor card-builder card-calculator"
+    "card-supervisor card-karma card-calculator"
+    ". card-karma .";
+}
+
+.card-builder {
+  width: 35rem;
+  height: 25rem;
+  background-color: blue;
+  grid-area: card-builder;
+}
+
+.card-supervisor {
+  width: 35rem;
+  height: 25rem;
+
+  background-color: yellowgreen;
+  grid-area: card-supervisor;
+}
+
+.card-calculator {
+  width: 35rem;
+  height: 25rem;
+
+  background-color: rgb(100, 134, 113);
+  grid-area: card-calculator;
+}
+
+.card-karma {
+  width: 35rem;
+  height: 25rem;
+
+  background-color: tomato;
+  grid-area: card-karma;
+}
